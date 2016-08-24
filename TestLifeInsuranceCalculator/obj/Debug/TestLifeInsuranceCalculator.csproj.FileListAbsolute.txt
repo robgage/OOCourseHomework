@@ -1,0 +1,9 @@
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\obj\Debug\TestLifeInsuranceCalculator.csprojResolveAssemblyReference.cache
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\bin\Debug\TestLifeInsuranceCalculator.dll
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\bin\Debug\TestLifeInsuranceCalculator.pdb
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\obj\Debug\TestLifeInsuranceCalculator.dll
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\obj\Debug\TestLifeInsuranceCalculator.pdb
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\bin\Debug\LifeInsuranceCalculator.exe
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\bin\Debug\nunit.framework.dll
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\bin\Debug\LifeInsuranceCalculator.pdb
+C:\Projects\OOCourseHomework\TestLifeInsuranceCalculator\bin\Debug\nunit.framework.xml

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace LifeInsuranceCalculator
 {
-    class DateOfBirth
+    public class DateOfBirth
     {
         public int Age { get; set; }
 
-        public int CalculateAgeFromDOB(String input)
+        public int CalculateAgeFromDOB(string input)
         {
             DateTime DOB = Convert.ToDateTime(input);
             DateTime today = DateTime.Today;
