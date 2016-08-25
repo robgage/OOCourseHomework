@@ -118,5 +118,19 @@ namespace LifeInsuranceCalculator
             ChildLoading child = new ChildLoading();
             Assert.AreEqual(child.ApplyChildLoading(100, true), 150);
         }
+
+        [Test]
+        public void IfTheApplicantIsANonSmoker_ThenNoSmokerLoadingIsApplied()
+        {
+            SmokerLoading Smoke = new SmokerLoading();
+            Assert.AreEqual(Smoke.ApplySmokerLoading(100, false), 100);
+        }
+
+        [Test]
+        public void IfTheApplicantIsASmoker_ThenLoadBy300Percent()
+        {
+            SmokerLoading Smoke = new SmokerLoading();
+            Assert.AreEqual(Smoke.ApplySmokerLoading(100, true), 300);
+        }
     }
 }
