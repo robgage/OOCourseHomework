@@ -39,6 +39,8 @@ namespace LifeInsuranceCalculator
             ChildLoading child = new ChildLoading();
             double PremiumAfterChildLoad = child.ApplyChildLoading(BasePremium, quote.HasChildren);
 
+            SmokerLoading smoke = new SmokerLoading();
+            double PremiumAfterLifeStyleAdjustment = smoke.ApplySmokerLoading(PremiumAfterChildLoad, quote.IsSmoker);
 
             Console.WriteLine("Your Quote is £xx.xx");
             Console.WriteLine("Press any key to exit");
