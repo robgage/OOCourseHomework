@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicantDetails.cs" />
+    <Compile Include="BasePrice.cs" />
     <Compile Include="DateOfBirth.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

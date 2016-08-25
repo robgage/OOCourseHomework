@@ -29,6 +29,12 @@ namespace LifeInsuranceCalculator
 
             Console.WriteLine("Do you have any children?, please enter Y for Yes, N for No");
             quote.HasChildren = quote.SetChildren(Console.ReadLine());
+
+            Console.WriteLine("Thank you, calculating your quote");
+
+            int BasePremium = new BasePrice().ReturnBasePrice(quote);
+
+
         }
     }
 }
