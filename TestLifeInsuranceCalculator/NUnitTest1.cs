@@ -104,5 +104,19 @@ namespace LifeInsuranceCalculator
             ApplicantDetails foo = new ApplicantDetails { Age = 70, isMale = false };
             Assert.AreEqual(b.ReturnBasePrice(foo), 485);
         }
+
+        [Test]
+        public void NoChildren_ShouldNotLoadPremiun()
+        {
+            ChildLoading child = new ChildLoading();
+            Assert.AreEqual(child.ApplyChildLoading(100, false),100);
+        }
+
+        [Test]
+        public void WithChildren_ShouldIncreasePremiumBy50Percent()
+        {
+            ChildLoading child = new ChildLoading();
+            Assert.AreEqual(child.ApplyChildLoading(100, true), 150);
+        }
     }
 }

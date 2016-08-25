@@ -34,7 +34,15 @@ namespace LifeInsuranceCalculator
 
             int BasePremium = new BasePrice().ReturnBasePrice(quote);
 
+            // Add regional health index in here
 
+            ChildLoading child = new ChildLoading();
+            double PremiumAfterChildLoad = child.ApplyChildLoading(BasePremium, quote.HasChildren);
+
+
+            Console.WriteLine("Your Quote is £xx.xx");
+            Console.WriteLine("Press any key to exit");
+            Console.ReadLine();
         }
     }
 }

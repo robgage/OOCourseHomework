@@ -5,3 +5,4 @@ C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\LifeInsuranceCalc
 C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\LifeInsuranceCalculator.pdb
 C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\nunit.framework.dll
 C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\nunit.framework.xml
+C:\Projects\OOCourseHomework\LifeInsuranceCalculator\obj\Debug\LifeInsuranceCalculator.csprojResolveAssemblyReference.cache
