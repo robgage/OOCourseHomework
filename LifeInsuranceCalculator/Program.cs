@@ -18,6 +18,9 @@ namespace LifeInsuranceCalculator
             Console.WriteLine("Please Select Your Gender {0} 1. Male {0} 2. Female",Environment.NewLine);
             quote.isMale = quote.SetGender(Console.ReadLine());
 
+            CountryOfResidence country = new CountryOfResidence();
+            quote.Country = country.SelectCountry();
+
             Console.WriteLine("Please Enter your post code");
             quote.PostCode = Console.ReadLine();
 
@@ -33,11 +36,11 @@ namespace LifeInsuranceCalculator
             Console.WriteLine("Thank you, calculating your quote");
 
             decimal BasePremium = new BasePrice().ReturnBasePrice(quote);
-
-            // Add regional health index in here
+            
+            decimal AfterRHI = BasePremium + country.ReturnRHIDifference(quote.Country);
 
             ChildLoading child = new ChildLoading();
-            decimal PremiumAfterChildLoad = child.ApplyChildLoading(BasePremium, quote.HasChildren);
+            decimal PremiumAfterChildLoad = child.ApplyChildLoading(AfterRHI, quote.HasChildren);
 
             SmokerLoading smoke = new SmokerLoading();
             decimal PremiumAfterLifeStyleAdjustment = smoke.ApplySmokerLoading(PremiumAfterChildLoad, quote.IsSmoker);

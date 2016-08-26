@@ -50,6 +50,7 @@
     <Compile Include="ApplicantDetails.cs" />
     <Compile Include="BasePrice.cs" />
     <Compile Include="ChildLoading.cs" />
+    <Compile Include="CountryofResidence.cs" />
     <Compile Include="DateOfBirth.cs" />
     <Compile Include="HealthyLifeStyleBonus.cs" />
     <Compile Include="Program.cs" />

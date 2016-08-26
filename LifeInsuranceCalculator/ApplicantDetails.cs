@@ -14,7 +14,8 @@ namespace LifeInsuranceCalculator
         public string PostCode { get; set; }
         public bool? IsSmoker { get; set; }
         public int WeeklyExcercise { get; set; }
-        public bool? HasChildren { get; set; }        
+        public bool? HasChildren { get; set; }    
+        public CountryOfResidence.Country Country { get; set; }    
 
         public int CalculateAgeFromDateOfBirth(string input)
         {
