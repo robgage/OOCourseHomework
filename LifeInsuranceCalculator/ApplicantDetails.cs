@@ -43,11 +43,11 @@ namespace LifeInsuranceCalculator
 
         public bool? SetSmoker(string input)
         {
-            if (input == "Y")
+            if (input.ToUpper() == "Y")
             {
                 IsSmoker = true;
             }
-            else if (input == "N")
+            else if (input.ToUpper() == "N")
             {
                 IsSmoker = false;
             }
@@ -61,11 +61,11 @@ namespace LifeInsuranceCalculator
 
         public bool? SetChildren(string input)
         {
-            if (input == "Y")
+            if (input.ToUpper() == "Y")
             {
                 HasChildren = true;
             }
-            else if (input == "N")
+            else if (input.ToUpper() == "N")
             {
                 HasChildren = false;
             }

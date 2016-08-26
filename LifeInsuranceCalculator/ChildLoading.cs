@@ -9,7 +9,7 @@ namespace LifeInsuranceCalculator
     public class ChildLoading
     {
         public double LoadAmount = 0.5;
-        public double ApplyChildLoading(int Premium, bool? hasChildren)
+        public double ApplyChildLoading(double Premium, bool? hasChildren)
         {
             if (hasChildren == true)
             {

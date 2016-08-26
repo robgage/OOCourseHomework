@@ -32,7 +32,7 @@ namespace LifeInsuranceCalculator
 
             Console.WriteLine("Thank you, calculating your quote");
 
-            int BasePremium = new BasePrice().ReturnBasePrice(quote);
+            double BasePremium = new BasePrice().ReturnBasePrice(quote);
 
             // Add regional health index in here
 
