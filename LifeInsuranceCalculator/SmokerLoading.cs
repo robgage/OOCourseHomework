@@ -10,7 +10,7 @@ namespace LifeInsuranceCalculator
     {
         private static int SmokeLoading = 3;
 
-        public double ApplySmokerLoading(double premium, bool? isSmoker)
+        public decimal ApplySmokerLoading(decimal premium, bool? isSmoker)
         {
             if (isSmoker == true)
             {

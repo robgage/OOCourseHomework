@@ -32,17 +32,17 @@ namespace LifeInsuranceCalculator
 
             Console.WriteLine("Thank you, calculating your quote");
 
-            double BasePremium = new BasePrice().ReturnBasePrice(quote);
+            decimal BasePremium = new BasePrice().ReturnBasePrice(quote);
 
             // Add regional health index in here
 
             ChildLoading child = new ChildLoading();
-            double PremiumAfterChildLoad = child.ApplyChildLoading(BasePremium, quote.HasChildren);
+            decimal PremiumAfterChildLoad = child.ApplyChildLoading(BasePremium, quote.HasChildren);
 
             SmokerLoading smoke = new SmokerLoading();
-            double PremiumAfterLifeStyleAdjustment = smoke.ApplySmokerLoading(PremiumAfterChildLoad, quote.IsSmoker);
+            decimal PremiumAfterLifeStyleAdjustment = smoke.ApplySmokerLoading(PremiumAfterChildLoad, quote.IsSmoker);
 
-            Console.WriteLine("Your Quote is £xx.xx");
+            Console.WriteLine("Your Quote is {0}",PremiumAfterLifeStyleAdjustment.ToString("C"));
             Console.WriteLine("Press any key to exit");
             Console.ReadLine();
         }

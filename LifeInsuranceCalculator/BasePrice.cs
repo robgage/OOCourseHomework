@@ -13,7 +13,7 @@ namespace LifeInsuranceCalculator
         public bool isMale { get; set; }
         public int Base { get; set; }
 
-        public double ReturnBasePrice(ApplicantDetails App)
+        public decimal ReturnBasePrice(ApplicantDetails App)
         {
             List<BasePrice> list = LoadBasePrice();
             foreach (BasePrice Price in list)

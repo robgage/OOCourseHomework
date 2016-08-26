@@ -8,8 +8,8 @@ namespace LifeInsuranceCalculator
 {
     public class ChildLoading
     {
-        public double LoadAmount = 0.5;
-        public double ApplyChildLoading(double Premium, bool? hasChildren)
+        public decimal LoadAmount = 0.5M;
+        public decimal ApplyChildLoading(decimal Premium, bool? hasChildren)
         {
             if (hasChildren == true)
             {

@@ -132,5 +132,16 @@ namespace LifeInsuranceCalculator
             SmokerLoading Smoke = new SmokerLoading();
             Assert.AreEqual(Smoke.ApplySmokerLoading(100, true), 300);
         }
+
+        [Test]
+        public void PremiumChange_BasedOnExcerciseLevels()
+        {
+            HealthyLifeStyleBonus hl = new HealthyLifeStyleBonus();
+            Assert.AreEqual(hl.ApplyLifeStyleBonus(100, 0), 120);
+            Assert.AreEqual(hl.ApplyLifeStyleBonus(100, 1), 100);
+            Assert.AreEqual(hl.ApplyLifeStyleBonus(100, 3), 70);
+            Assert.AreEqual(hl.ApplyLifeStyleBonus(100, 6), 50);
+            Assert.AreEqual(hl.ApplyLifeStyleBonus(100, 10), 150);
+        }
     }
 }

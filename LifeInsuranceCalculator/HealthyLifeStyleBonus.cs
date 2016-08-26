@@ -9,7 +9,7 @@ namespace LifeInsuranceCalculator
     public class HealthyLifeStyleBonus
     {
         private double Load { get; set; }
-        public double ApplyLifeStyleBonus(int premium, int HoursExcercise)
+        public double ApplyLifeStyleBonus(double premium, int HoursExcercise)
         {
             if (HoursExcercise == 0)
             {
