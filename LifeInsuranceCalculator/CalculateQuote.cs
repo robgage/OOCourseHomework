@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LifeInsuranceCalculator
 {
-    class CalculateQuote
+    public class CalculateQuote
     {
         public decimal MinimumPremium = 50;
         public decimal CalculateFinalQuote(ApplicantDetails quote)

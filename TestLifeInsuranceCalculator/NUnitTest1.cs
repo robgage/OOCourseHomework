@@ -9,7 +9,7 @@ namespace LifeInsuranceCalculator
     {
                 [Test]
         public void TestAgeCalculated_WhenBirthdayAlreadyPassedThisYear()
-        {
+        {            
             DateOfBirth DOB = new DateOfBirth();
             Assert.AreEqual(DOB.CalculateAgeFromDOB("07/01/1979"), 37);
             // Make this cope with a target age rather than a fixed date which will require test changed on 7/12/2016!!1
@@ -152,6 +152,22 @@ namespace LifeInsuranceCalculator
             foo.Country = CountryOfResidence.Country.England;
             Assert.AreEqual(bar.ReturnRHIDifference(foo.Country), 0);
             
+        }
+
+        [Test]
+        public void CorrectFinalPremiumCalculated()
+        {
+            ApplicantDetails app = new ApplicantDetails();
+            app.Age = 36;
+            app.isMale = true;
+            app.Country = CountryOfResidence.Country.England;
+            app.HasChildren = true;
+            app.IsSmoker = false;
+            app.WeeklyExcercise = 2;
+
+            CalculateQuote CQ = new CalculateQuote();
+
+            Assert.AreEqual(CQ.CalculateFinalQuote(app), 375);
         }
     }
 }
