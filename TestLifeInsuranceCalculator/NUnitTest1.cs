@@ -12,8 +12,7 @@ namespace LifeInsuranceCalculator
         {
             DateTime test = new DateTime(DateTime.Now.AddYears(-37).Year,1,1);
             DateOfBirth DOB = new DateOfBirth();
-            Assert.AreEqual(DOB.CalculateAgeFromDOB(test.ToString("dd/MM/yyyy")), 37);
-            // Make this cope with a target age rather than a fixed date which will require test changed on 7/12/2016!!1
+            Assert.AreEqual(DOB.CalculateAgeFromDOB(test.ToString("dd/MM/yyyy")), 37);            
         }
 
         [Test]
@@ -21,8 +20,7 @@ namespace LifeInsuranceCalculator
         {
             DateTime test = new DateTime(DateTime.Now.AddYears(-37).Year, 12, 31);
             DateOfBirth DOB = new DateOfBirth();
-            Assert.AreEqual(DOB.CalculateAgeFromDOB(test.ToString("dd/MM/yyyy")), 36);
-            // Make this cope with a target age rather than a fixed date which will require test changed on 7/12/2016!!1
+            Assert.AreEqual(DOB.CalculateAgeFromDOB(test.ToString("dd/MM/yyyy")), 36);            
         }
 
         [Test]
