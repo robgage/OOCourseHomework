@@ -49,8 +49,10 @@
   <ItemGroup>
     <Compile Include="ApplicantDetails.cs" />
     <Compile Include="BasePrice.cs" />
+    <Compile Include="CalculateQuote.cs" />
     <Compile Include="ChildLoading.cs" />
     <Compile Include="CountryofResidence.cs" />
+    <Compile Include="DataCollection.cs" />
     <Compile Include="DateOfBirth.cs" />
     <Compile Include="HealthyLifeStyleBonus.cs" />
     <Compile Include="Program.cs" />

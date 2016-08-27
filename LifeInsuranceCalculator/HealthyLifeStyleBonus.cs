@@ -8,12 +8,12 @@ namespace LifeInsuranceCalculator
 {
     public class HealthyLifeStyleBonus
     {
-        private double Load { get; set; }
-        public double ApplyLifeStyleBonus(double premium, int HoursExcercise)
+        private decimal Load { get; set; }
+        public decimal ApplyLifeStyleBonus(decimal premium, int HoursExcercise)
         {
             if (HoursExcercise == 0)
             {
-                Load = 1.2;
+                Load = 1.2M;
             }
             else if (HoursExcercise == 1 || HoursExcercise == 2)
             {
@@ -21,15 +21,15 @@ namespace LifeInsuranceCalculator
             }
             else if (HoursExcercise >= 3 && HoursExcercise <=5)
             {
-                Load = 0.7;
+                Load = 0.7M;
             }
             else if (HoursExcercise >= 6 && HoursExcercise <= 8)
             {
-                Load = 0.5;
+                Load = 0.5M;
             }
             else if (HoursExcercise >= 9)
             {
-                Load = 1.5;
+                Load = 1.5M;
             }
 
             var result = premium * Load;
