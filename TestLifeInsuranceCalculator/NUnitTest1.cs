@@ -9,17 +9,19 @@ namespace LifeInsuranceCalculator
     {
                 [Test]
         public void TestAgeCalculated_WhenBirthdayAlreadyPassedThisYear()
-        {            
+        {
+            DateTime test = new DateTime(DateTime.Now.AddYears(-37).Year,1,1);
             DateOfBirth DOB = new DateOfBirth();
-            Assert.AreEqual(DOB.CalculateAgeFromDOB("07/01/1979"), 37);
+            Assert.AreEqual(DOB.CalculateAgeFromDOB(test.ToString("dd/MM/yyyy")), 37);
             // Make this cope with a target age rather than a fixed date which will require test changed on 7/12/2016!!1
         }
 
         [Test]
         public void TestAgeCalculated_WhenBirthdayIsLaterInYear()
         {
+            DateTime test = new DateTime(DateTime.Now.AddYears(-37).Year, 12, 31);
             DateOfBirth DOB = new DateOfBirth();
-            Assert.AreEqual(DOB.CalculateAgeFromDOB("31/12/1979"), 36);
+            Assert.AreEqual(DOB.CalculateAgeFromDOB(test.ToString("dd/MM/yyyy")), 36);
             // Make this cope with a target age rather than a fixed date which will require test changed on 7/12/2016!!1
         }
 
