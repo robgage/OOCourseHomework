@@ -19,25 +19,37 @@ namespace LifeInsuranceCalculator
         }
 
         public Country SelectCountry()
-        {            
-            int optionNumber = 1;
+        {                        
             Console.WriteLine("Please select your contry of residence from the list below");
-            foreach (Country option in Enum.GetValues(typeof(Country)))
-            {
-                Console.WriteLine("{0}. {1}", optionNumber, option.ToString());
-                optionNumber++;
-            }
+            Console.WriteLine("1. England");
+            Console.WriteLine("2. Wales");
+            Console.WriteLine("3. Scotland");
+            Console.WriteLine("4. Ireland");
+            Console.WriteLine("5. Northern Ireland");
+            Console.WriteLine("Any Other Key = Any Other Country");            
 
             int selected = Convert.ToInt32(Console.ReadLine());
-            int loop = 1;
-            foreach (Country option in Enum.GetValues(typeof(Country)))
+            if (selected == 1)
             {
-                if (loop == selected)
-                {
-                    return option;
-                }
+                return Country.England;
             }
-
+            else if (selected == 2)
+            {
+                return Country.Wales;
+            }
+            else if (selected == 3)
+            {
+                return Country.Scotland;
+            }
+            else if (selected == 4)
+            {
+                return Country.Ireland;
+            }
+            else if (selected == 5)
+            {
+                return Country.NorthernIreland;
+            }
+            
             return Country.Other;
         }
 

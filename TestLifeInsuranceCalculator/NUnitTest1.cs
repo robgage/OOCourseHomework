@@ -7,8 +7,7 @@ namespace LifeInsuranceCalculator
     [TestFixture]
     public class NUnitTest1
     {
-
-        [Test]
+                [Test]
         public void TestAgeCalculated_WhenBirthdayAlreadyPassedThisYear()
         {
             DateOfBirth DOB = new DateOfBirth();
@@ -142,6 +141,17 @@ namespace LifeInsuranceCalculator
             Assert.AreEqual(hl.ApplyLifeStyleBonus(100, 3), 70);
             Assert.AreEqual(hl.ApplyLifeStyleBonus(100, 6), 50);
             Assert.AreEqual(hl.ApplyLifeStyleBonus(100, 10), 150);
+        }
+
+        [Test]
+        public void RegionalHealthIndexEngland_AppliesNoDiscountOrLoad()
+        {
+            CountryOfResidence bar = new CountryOfResidence();
+            ApplicantDetails foo = new ApplicantDetails();
+
+            foo.Country = CountryOfResidence.Country.England;
+            Assert.AreEqual(bar.ReturnRHIDifference(foo.Country), 0);
+            
         }
     }
 }

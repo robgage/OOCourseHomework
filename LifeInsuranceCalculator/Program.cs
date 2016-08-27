@@ -43,9 +43,24 @@ namespace LifeInsuranceCalculator
             decimal PremiumAfterChildLoad = child.ApplyChildLoading(AfterRHI, quote.HasChildren);
 
             SmokerLoading smoke = new SmokerLoading();
-            decimal PremiumAfterLifeStyleAdjustment = smoke.ApplySmokerLoading(PremiumAfterChildLoad, quote.IsSmoker);
+            decimal PremiumAfterLifeStyleAdjustment = smoke.ApplySmokerLoading(PremiumAfterChildLoad, quote.IsSmoker);            
 
-            Console.WriteLine("Your Quote is {0}",PremiumAfterLifeStyleAdjustment.ToString("C"));
+            
+            
+        }
+
+        public void presentFinalQuote(decimal finalQuote)
+        {
+            if (PremiumAfterLifeStyleAdjustment < 50)
+            {
+                finalQuote = 50;
+            }
+            else
+            {
+                finalQuote = PremiumAfterLifeStyleAdjustment;
+            }
+
+            Console.WriteLine("Your Quote is {0}", finalQuote.ToString("C"));
             Console.WriteLine("Press any key to exit");
             Console.ReadLine();
         }
