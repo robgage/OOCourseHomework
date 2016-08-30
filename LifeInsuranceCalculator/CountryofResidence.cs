@@ -26,7 +26,7 @@ namespace LifeInsuranceCalculator
             Console.WriteLine("3. Scotland");
             Console.WriteLine("4. Ireland");
             Console.WriteLine("5. Northern Ireland");
-            Console.WriteLine("Any Other Key = Any Other Country");            
+            Console.WriteLine("6. Any Other Country");            
 
             int selected = Convert.ToInt32(Console.ReadLine());
             if (selected == 1)
@@ -49,8 +49,18 @@ namespace LifeInsuranceCalculator
             {
                 return Country.NorthernIreland;
             }
+            else if (selected == 6)
+            {
+                return Country.Other;
+            }
+            else
+            {
+                ApplicantDetails foo = new ApplicantDetails();
+                foo.ItsAllBroken();
+                return Country.Other;
+            }
             
-            return Country.Other;
+            
         }
 
         public int ReturnRHIDifference(Country SelectedCountry)

@@ -26,6 +26,9 @@ namespace LifeInsuranceCalculator
                     }
                 }                    
             }
+
+            CalculateQuote foo = new CalculateQuote();
+            foo.CalculationError("Base Premium");
             return 0;
         }
         private List<BasePrice> LoadBasePrice()

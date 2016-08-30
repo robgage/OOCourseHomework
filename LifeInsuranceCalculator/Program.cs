@@ -29,7 +29,6 @@ namespace LifeInsuranceCalculator
             Console.ReadLine();
             
         }
-
         
     }
 }

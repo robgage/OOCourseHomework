@@ -26,5 +26,13 @@ namespace LifeInsuranceCalculator
 
             return PremiumAfterLifeStyleAdjustment;
         }
+
+        public void CalculationError(string errorcode)
+        {
+            Console.WriteLine("Unable to calculate quote due to missing {0}",errorcode);
+            Console.WriteLine("Please press any key to start again");
+            Console.ReadLine();
+            Environment.Exit(0);
+        }
     }
 }

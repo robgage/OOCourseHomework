@@ -36,8 +36,7 @@ namespace LifeInsuranceCalculator
             }
             else
             {
-                isMale = null;
-                Console.WriteLine("please start again");
+                ItsAllBroken();
             }
             return isMale;
         }
@@ -54,8 +53,7 @@ namespace LifeInsuranceCalculator
             }
             else
             {
-                Console.WriteLine("please start again");
-                IsSmoker = null;
+                ItsAllBroken();
             }
             return IsSmoker;
         }
@@ -72,10 +70,17 @@ namespace LifeInsuranceCalculator
             }
             else
             {
-                HasChildren = null;
-                Console.WriteLine("please try again");
+                ItsAllBroken();
             }
             return HasChildren;
+        }
+
+        public void ItsAllBroken()
+        {
+            Console.WriteLine("An invalid selection has been made");
+            Console.WriteLine("Please press any key to start again");
+            Console.ReadLine();
+            Environment.Exit(0);
         }
 
     }
