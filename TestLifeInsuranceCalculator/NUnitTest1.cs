@@ -7,7 +7,7 @@ namespace LifeInsuranceCalculator
     [TestFixture]
     public class NUnitTest1
     {
-                [Test]
+        [Test]
         public void TestAgeCalculated_WhenBirthdayAlreadyPassedThisYear()
         {
             DateTime test = new DateTime(DateTime.Now.AddYears(-37).Year,1,1);
