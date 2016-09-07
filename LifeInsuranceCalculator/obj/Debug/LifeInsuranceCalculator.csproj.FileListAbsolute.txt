@@ -1,8 +1,7 @@
 C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\LifeInsuranceCalculator.exe.config
-C:\Projects\OOCourseHomework\LifeInsuranceCalculator\obj\Debug\LifeInsuranceCalculator.exe
-C:\Projects\OOCourseHomework\LifeInsuranceCalculator\obj\Debug\LifeInsuranceCalculator.pdb
 C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\LifeInsuranceCalculator.exe
 C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\LifeInsuranceCalculator.pdb
 C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\nunit.framework.dll
 C:\Projects\OOCourseHomework\LifeInsuranceCalculator\bin\Debug\nunit.framework.xml
-C:\Projects\OOCourseHomework\LifeInsuranceCalculator\obj\Debug\LifeInsuranceCalculator.csprojResolveAssemblyReference.cache
+C:\Projects\OOCourseHomework\LifeInsuranceCalculator\obj\Debug\LifeInsuranceCalculator.exe
+C:\Projects\OOCourseHomework\LifeInsuranceCalculator\obj\Debug\LifeInsuranceCalculator.pdb

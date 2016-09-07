@@ -37,12 +37,6 @@ namespace LifeInsuranceCalculator
             Assert.AreEqual(foo.SetGender("2"), false);
         }
 
-        [Test]
-        public void WhenInvalidKeySelected_IsMaleReturnsNull()
-        {
-            ApplicantDetails foo = new ApplicantDetails();
-            Assert.Null(foo.SetGender("herp"));
-        }
 
         [Test]
         public void WhenYEnteredForSmoker_IsSmokerReturnsTrue()
@@ -58,12 +52,6 @@ namespace LifeInsuranceCalculator
             Assert.AreEqual(foo.SetSmoker("N"), false);
         }
 
-        [Test]
-        public void WhenInvalidCharacterEnteredForSmoker_IsSmokerReturnsNull()
-        {
-            ApplicantDetails foo = new ApplicantDetails();
-            Assert.Null(foo.SetSmoker("g"));
-        }
 
         [Test]
         public void WhenYSelected_HasChildrenIsTrue()
@@ -79,13 +67,7 @@ namespace LifeInsuranceCalculator
             Assert.AreEqual(foo.SetChildren("N"), false);
         }
 
-        [Test]
-        public void WhenInvalidKeySelected_HasChildredIsNull()
-        {
-            ApplicantDetails foo = new ApplicantDetails();
-            Assert.Null(foo.SetChildren("p"));
-        }
-        
+       
         // Consider a rates test class to cover all of these rather than just a couple??
         [Test]  
         public void BaseRateFor10YearOldBoy_ShouldBe150()
