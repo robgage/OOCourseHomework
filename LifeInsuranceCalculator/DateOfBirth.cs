@@ -12,7 +12,18 @@ namespace LifeInsuranceCalculator
 
         public int CalculateAgeFromDOB(string input)
         {
-            DateTime DOB = Convert.ToDateTime(input);
+            DateTime DOB = new DateTime();
+            try
+            {
+                DOB = Convert.ToDateTime(input);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("{0} is not a valid date", input);
+                ApplicantDetails foo = new ApplicantDetails();
+                foo.ItsAllBroken();
+            }
+            
             DateTime today = DateTime.Today;
             Age = today.Year - DOB.Year;
 

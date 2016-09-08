@@ -15,7 +15,16 @@ namespace LifeInsuranceCalculator
             quote.Age = quote.CalculateAgeFromDateOfBirth(Console.ReadLine());
 
             Console.WriteLine("Please Select Your Gender {0} 1. Male {0} 2. Female", Environment.NewLine);
-            quote.isMale = quote.SetGender(Console.ReadLine());
+            try
+            {
+                quote.isMale = quote.SetGender(Console.ReadLine());
+            }
+            catch (NullReferenceException)
+            {
+                Console.WriteLine("Please try again");
+                quote.isMale = quote.SetGender(Console.ReadLine());                            
+            }
+            
 
             CountryOfResidence country = new CountryOfResidence();
             quote.Country = country.SelectCountry();

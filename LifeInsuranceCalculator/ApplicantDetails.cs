@@ -26,6 +26,11 @@ namespace LifeInsuranceCalculator
 
         public bool? SetGender(string input)
         {
+            if (string.IsNullOrEmpty(input))
+            {
+                throw new NullReferenceException("Please enter a valid key");
+            }
+
             if (input == "1")
             {
                 isMale = true;
@@ -33,10 +38,6 @@ namespace LifeInsuranceCalculator
             else if (input == "2")
             {
                 isMale = false;
-            }
-            else
-            {
-                ItsAllBroken();
             }
             return isMale;
         }
